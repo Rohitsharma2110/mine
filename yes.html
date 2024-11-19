@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(90deg, #c375ff, #e6498a);
+      }
+      .content-container {
+        text-align: center; /* Center the text */
+      }
+
+      /* Header styling */
+      .header_text {
+        font-style: oblique;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 20px; /* Spacing between header and button */
+      }
+      .gif_container {
+        margin: 30px 0; /* Spacing around the GIF */
+      }
+
+      /* GIF styling */
+      .gif_container img {
+        width: 100%; /* Full width within the container */
+        max-width: 400px; /* Restrict maximum width */
+        border-radius: 100px; /* Rounded corners for a softer look */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+      }
+
+      /* GIF hover effect */
+      .gif_container img:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <div>
+        <h1 class="header_text">i knew it!!</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/CrW3tNMZsInt8i0kgo/giphy.gif?cid=ecf05e473rwpwissqtlto76xo8bb5tml20fm8h8n5da06isy&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="Cute animated illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>

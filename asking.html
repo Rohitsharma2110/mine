@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovely Button</title>
+    <style>
+      /* Background for the entire page */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(90deg, #c375ff, #e6498a);
+      }
+
+      /* Container for the content */
+      .content-container {
+        text-align: center; /* Center the text */
+      }
+
+      /* Header styling */
+      .header_text {
+        font-family: 'Nunito';
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+      }
+
+      .header_text_2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+      }
+
+      /* Lovely button styling */
+      .lovely-button {
+        background: linear-gradient(90deg, #785afd88, #ec555a9f); /* Gradient background */
+        border: solid white; /* Border */
+        color: white; /* Text color */
+        font-size: 18px; /* Text size */
+        font-weight: bold; /* Bold text */
+        padding: 15px 30px; /* Space inside the button */
+        border-radius: 50px; /* Rounded corners */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: all 0.3s ease; /* Smooth animations */
+        position: relative; /* Make position adjustable for "No" button */
+      }
+
+      /* Hover effect */
+      .lovely-button:hover {
+        transform: translateY(-3px); /* Move up slightly */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        background: linear-gradient(90deg, #ff6b81, #ff85b3); /* Change gradient */
+      }
+
+      /* GIF container */
+      .gif_container {
+        margin: 20px 0; /* Spacing around the GIF */
+      }
+
+      /* GIF styling */
+      .gif_container img {
+        width: 100%; /* Full width within the container */
+        max-width: 400px; /* Restrict maximum width */
+        border-radius: 100px; /* Rounded corners for a softer look */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+      }
+
+      /* GIF hover effect */
+      .gif_container img:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <div>
+        <h1 class="header_text">I'm asking you straight.</h1>
+        <h2 class="header_text_2">Do you like my maalik?</h2>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/k8Kc2yuTepRLj0jhpF/giphy.gif?cid=ecf05e47huvy7n4gxatqh8v14977hc4hiz43n9xf6a7wn87i&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="lovely-button" id="yesButton" onclick="nextPage()">Yes</button>
+        <button class="lovely-button" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+      </div>
+    </div>
+
+    <script>
+      function nextPage() {
+        window.location.href = "yes.html";
+      }
+
+      function moveButton() {
+        const noButton = document.getElementById('noButton');
+        const x =
+          Math.random() * (window.innerWidth - noButton.offsetWidth - 20);
+        const y =
+          Math.random() * (window.innerHeight - noButton.offsetHeight - 20);
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovely Button</title>
+    <style>
+      /* Background for the entire page */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(90deg, #c375ff, #e6498a);
+      }
+
+      /* Container for the content */
+      .content-container {
+        text-align: center; /* Center the text */
+      }
+
+      /* Header styling */
+      .header_text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 20px; /* Spacing between header and button */
+      }
+
+      /* Lovely button styling */
+      .lovely-button {
+        background: linear-gradient(
+          90deg,
+          #785afd88,
+          #ec555a9f
+        ); /* Gradient background */
+        border-style:solid; /* border */
+        border-color: white;
+        color: white; /* Text color */
+        font-size: 18px; /* Text size */
+        font-weight: bold; /* Bold text */
+        padding: 15px 30px; /* Space inside the button */
+        border-radius: 50px; /* Rounded corners */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: all 0.3s ease; /* Smooth animations */
+      }
+
+      /* Hover effect */
+      .lovely-button:hover {
+        transform: translateY(-3px); /* Move up slightly */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        background: linear-gradient(
+          90deg,
+          #ff6b81,
+          #ff85b3
+        ); /* Change gradient */
+      }
+
+      /* Active (pressed) state */
+      .lovely-button:active {
+        transform: translateY(1px); /* Slight press-in effect */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+      }
+
+      .gif_container {
+        margin: 20px 0; /* Spacing around the GIF */
+      }
+
+      /* GIF styling */
+      .gif_container img {
+        width: 100%; /* Full width within the container */
+        max-width: 400px; /* Restrict maximum width */
+        border-radius: 140px; /* Rounded corners for a softer look */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+      }
+
+      /* GIF hover effect */
+      .gif_container img:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+      }
+
+    .header_text {
+            font-family: 'Nunito';
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <div>
+        <h1 class="header_text">Wait...</h1>
+        <h1 class="header_text">Lemme sniff you first</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/JgoR0nYkf8TXG/giphy.gif?cid=ecf05e47ehu38gl0g7heulka7ak78hrzqf2q8k2gm5kp1pgd&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        />
+      </div>
+      <h2 class="header_text">
+        To tum ho yashi, jiske uper mere maalik ka dil aaya hua h..
+      </h2>
+      <button class="lovely-button" onclick="nextPage()">
+        chalo click kro..
+      </button>
+      <script>
+        function nextPage() {
+          window.location.href = "asking.html";
+        }
+      </script>
+    </div>
+  </body>
+</html>
